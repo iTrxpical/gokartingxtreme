@@ -52,7 +52,7 @@ client.on('message', message => {
             console.log(`${message.author.username} ran the command: ${cmd} sucessfully!`);
 
         }
-    }
+    })
 
 
 client.login(process.env.TOKEN);
