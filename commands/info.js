@@ -8,13 +8,13 @@ exports.run = (Discord, client, message, args) => {
         .setColor(randomColor)
         .setTitle("📖 Go-Karting Xtreme Information")
         .setDescription("For other inquiries that this information doesn't cover, use `-new [Issue]` in `#create-ticket`!")
-        .addField(":iphone: What is Go-Karting Xtreme?", "")
-        .addField(":pencil2: How do I use BloxiCord?", "BloxiCord is designed to be a simple, fast and easy solution to all the bots that are found in a regular discord server. More than 90% of the people we asked had over 3 bots that did different things in their server, we are coming in to try and lower that in an even more simpler fasion. If our `~cmds` and `~help` commands didn't help, join our official discord server down below. We have an active support team waiting to help you!")
-        .addField(":telephone_receiver: Support?", "Struggling with BloxiCord? Found a bug? Have a suggestion of a feature you want us to add? Feel free to join our discord offical server (link below)! If you do require help simply head to the support channel and run the `~support` command!")
-        .addField(":moneybag: How much does it cost?", "The regular bot is free! When we release the paid version, it will have more functions but BloxiCord will always be free.")
-        .addField(":inbox_tray: BloxiCord Bot Invite", "**Click this button for an invite link:** [<:radio_button:382568980218511361>](https://discordapp.com/oauth2/authorize?client_id=414823685770444801&scope=bot&permissions=502627454)")
-        .addField(":pushpin: Official Server", "https://discord.gg/WxUPp3P")
-        .addField(":closed_book: Our Website", "**COMING SOON**")
+        .addField(":iphone: What is Go-Karting Xtreme?", "Go-Karting Xtreme is the biggest community run Go-Karting game on ROBLOX. We aim to provide the best Go-Karting racing experience compared to all other existing Go-Karting games.")
+        .addField(":pencil2: Sounds Great! How do I work here?", "At Go-Karting Xtreme, our setup allows for you to work in up to 5 departments! To work here, join our discord and go to `#Careers`, all infomation is posted there aswell as the applications thereself!")
+        .addField(":telephone_receiver: Awesome, but when do we operate?", "We operate in the times that support `BST`/`GMT`. For a list of our opening hours, go to `#opening-hours`!")
+        .addField(":moneybag: All set but I have a problem, what do I do?", "This document can't always help you, thats why we have a support team ready to help you! Go to `#create-ticket` and say `-new [Issue]`! Our team will be happy to work with you.")
+        .addField(":pushpin: Official Server", "https://discord.gg/GR9qVVd")
+        .addField(":closed_book: Our Website", "https://yar890.github.io/Go-KartingXtreme/home.html")
     message.author.sendEmbed(embedinfo);
+    message.delete(10000)
 
 }
