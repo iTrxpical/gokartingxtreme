@@ -17,8 +17,8 @@ client.on('ready', () => {
 client.on('message', message => {
 
     let boe = message.guild.roles.find(r => r.name === "Board of Exectives") || message.guild.roles.find(r => r.name === "Chief Executive Officer");
-    if (!message.member.hasRole(boe)) return;
-    if (!message.channel.id === '422091691604967425') message.delete(10000)
+    if (message.member.hasRole(boe)) return;
+    if (message.channel.id === '422091691604967425') message.delete(10000)
 
 })
    client.on('message', message => {
