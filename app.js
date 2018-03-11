@@ -18,9 +18,6 @@ client.on('message', message => {
 
     let boe = message.guild.roles.find(r => r.name === "Board of Exectives") || message.guild.roles.find(r => r.name === "Chief Executive Officer");
     if(message.channel.id === '422091691604967425' && !message.member.hasRole(boe)) return message.delete(10000)
-
-})
-   client.on('message', message => {
     
     
     let sender = message.author;
