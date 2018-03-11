@@ -19,7 +19,7 @@ client.on('message', message => {
 
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("**Unfortunately we can only read things in guilds (servers). Please use our commands in a server with `BloxiCord` in!** *If you believe there is a problem, please contact a server administator or contact our support team.*")
+        message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! **")
         return;
     }
 
