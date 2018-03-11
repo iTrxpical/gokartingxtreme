@@ -5,6 +5,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
+const prefix = '==';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs on BloxiCord.`);
@@ -30,11 +31,6 @@ client.on('message', message => {
         message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! **")
         return;
     }
-
-    var guildid = message.guild.id
-    db.fetch(`guildPrefix_${guildid}`).then(i => {
-
-        let prefix = i || '~'
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
