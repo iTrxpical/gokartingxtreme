@@ -1,4 +1,4 @@
-/ Go-Karting Xtreme Discord Bot Code
+// Go-Karting Xtreme Discord Bot Code
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
 // Discord Code: GR9qVVd
 
