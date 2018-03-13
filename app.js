@@ -9,16 +9,12 @@ const prefix = '==';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('on ' + client.guilds.size + ' servers! | ~help', { type: 'WATCHING' });
+    client.user.setActivity('over Go-Karting Xtreme | ~help', { type: 'WATCHING' });
     client.user.setStatus("online");
 });
 
 
-client.on('message', message => {
-
-    let boe = message.guild.roles.find(r => r.name === "Board of Exectives") || message.guild.roles.find(r => r.name === "Chief Executive Officer");
-    if(message.channel.id === '422091691604967425' && !message.member.hasRole(boe)) return message.delete(10000)
-    
+client.on('message', message => {    
     
     let sender = message.author;
 
