@@ -1,6 +1,6 @@
 exports.run = (Discord, client, message, args) => {
 
-    message.delete(10)
+    message.delete(50)
     var randomColor = Math.floor(Math.random() * 16777215).toString(16);
     var embedping = new Discord.RichEmbed()
         .setColor(randomColor)
