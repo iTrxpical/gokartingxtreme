@@ -23,6 +23,6 @@ exports.run(Discord, client, message, args, collector) => {
     let bookingchannel = message.guild.channels.find(`name`, "private-hire");
     if(!bookingchannel) return message.channel.send("There has been an error with our system, contact TheReal_CatCrafter to check the problem out.");
     bookingchannel.send(bookEmbed);
-    message.reply("Your booking has been placed! Expect a DM from our team shortly!")
+    message.reply("Your booking has been placed! Expect a DM from our team shortly!");
     
 }
