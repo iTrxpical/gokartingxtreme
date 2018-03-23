@@ -9,7 +9,7 @@ exports.run = (Discord, client, message, args) => {
         .setTitle("📖 Go-Karting Xtreme Information")
         .setDescription("For other inquiries that this information doesn't cover, use `-new [Issue]` in `#create-ticket`!")
         .addField(":iphone: What is Go-Karting Xtreme?", "Go-Karting Xtreme is the biggest community run Go-Karting game on ROBLOX. We aim to provide the best Go-Karting racing experience compared to all other existing Go-Karting games.")
-        .addField(":exclamation: How to verify", "Say '!verify' in #verify, or check #read-me for further assistance. To update you roles say '!getroles'
+        .addField(":exclamation: How to verify", "Say '!verify' in #verify, or check #read-me for further assistance. To update you roles say '!getroles'")
         .addField(":pencil2: Sounds Great! How do I work here?", "At Go-Karting Xtreme, our setup allows for you to work in up to 5 departments! To work here, join our discord and go to `#Careers`, all infomation is posted there aswell as the applications thereself!")
         .addField(":telephone_receiver: Awesome, but when do we operate?", "We operate in the times that support `BST`/`GMT`. For a list of our opening hours, go to `#opening-hours`!")
         .addField(":moneybag: All set but I have a problem, what do I do?", "This document can't always help you, thats why we have a support team ready to help you! Go to `#create-ticket` and say `-new [Issue]`! Our team will be happy to work with you.")
