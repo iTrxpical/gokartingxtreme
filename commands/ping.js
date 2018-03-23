@@ -8,4 +8,3 @@ exports.run = (Discord, client, message, args) => {
     message.channel.sendEmbed(embedping)
     .then(message.delete(10000))
   }
-}
