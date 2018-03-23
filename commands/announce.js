@@ -2,18 +2,15 @@ exports.run(Discord, client, message, args, collector) => {
 
 	message.author.send("What is the announcment title?");
         console.log(collector)
-        let time = collector.on('collect', message => {
+        let title = collector.on('collect', message => {
             });
-        let bookname = message.author;
-        message.author.send("What is the announcment description?")
-        console.log(collector)
-        let notes = collector.on('collect', message => {
+            
+        let description = collector.on('collect', message => {
         });
         
         let bookEmbed = new Discord.RichEmbed()
-    .setTitle(`${time}`)
-    .setDescription(`${notes}`)
-    .setAuthor(`${bootname}`)
+    .setTitle(`${title)
+    .setDescription(`${description}`)
     .setColor("#15f153")
     .setFooter("Go-Karting Xtreme", message.createdAt)
 
