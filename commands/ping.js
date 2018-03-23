@@ -5,7 +5,7 @@ exports.run = (Discord, client, message, args) => {
     var embedping = new Discord.RichEmbed()
         .setColor(randomColor)
         .addField(":ping_pong: Pongy!", new Date().getTime() - message.createdTimestamp + " ms")
-    message.channel.sendEmbed(embedping);
+    message.channel.sendEmbed(embedping)
     .then(message.delete(10000))
   }
 }
