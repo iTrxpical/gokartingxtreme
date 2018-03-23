@@ -20,7 +20,7 @@ client.on('message', message => {
 
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! **")
+        message.channel.send("Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! ")
         return;
     }
 
