@@ -6,4 +6,5 @@ exports.run = (Discord, client, message, args) => {
         .setColor(randomColor)
         .setTitle(":wave: Private Booking")
         .addField(":How to create a private booking:", new Date().getTime() - message.createdTimestamp + " ms")
+    message.channel.sendEmbed()
 }
