@@ -5,7 +5,7 @@ exports.run = (Discord, client, message, args) => {
     message.reply("check your DMs!");
     var embedinfo = new Discord.RichEmbed()
         .setFooter("© Go-Karting Xtreme | Made by TheReal (Catty)")
-        .setColor(randomColor)
+        .setColor(#FF0000)
         .setTitle("📖 Go-Karting Xtreme Information")
         .setDescription("For other inquiries that this information doesn't cover, use `-new [Issue]` in `#create-ticket`!")
         .addField(":iphone: What is Go-Karting Xtreme?", "Go-Karting Xtreme is the biggest community run Go-Karting game on ROBLOX. We aim to provide the best Go-Karting racing experience compared to all other existing Go-Karting games.")
