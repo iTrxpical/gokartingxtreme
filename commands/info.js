@@ -13,7 +13,7 @@ exports.run = (Discord, client, message, args) => {
         .addField(":telephone_receiver: Awesome, but when do we operate?", "We operate in the times that support `BST`/`GMT`. For a list of our opening hours, go to `#opening-hours`!")
         .addField(":moneybag: All set but I have a problem, what do I do?", "This document can't always help you, thats why we have a support team ready to help you! Go to `#create-ticket` and say `-new [Issue]`! Our team will be happy to work with you.")
         .addField(":pushpin: Official Server", "https://discord.gg/GR9qVVd")
-        .addField(":closed_book: Our Website", "https://yar890.github.io/Go-KartingXtreme/home.html")
+        .addField(":closed_book: Our Group", "https://www.roblox.com/My/Groups.aspx?gid=2633056")
     message.author.sendEmbed(embedinfo);
     message.delete(10000)
 
