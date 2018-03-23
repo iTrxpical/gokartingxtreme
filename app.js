@@ -17,11 +17,15 @@ client.on('ready', () => {
 client.on('message', message => {    
     
     let sender = message.author;
-
+    
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
         message.channel.send("Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! ")
         return;
+    }
+    
+    if (message.channel.id === '422091691604967425') {
+        message.delete
     }
 
         let msg = message.content.toLowerCase();
