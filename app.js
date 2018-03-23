@@ -26,6 +26,7 @@ client.on('message', message => {
     
     if (message.channel.id === '422091691604967425') {
         message.delete()
+        console.log(`Message deleted in #create-ticket`);
     }
 
         let msg = message.content.toLowerCase();
