@@ -1,6 +1,6 @@
 exports.run(Discord, client, message, args, collector) => {
 
-	      message.author.send("What time & date do you wish the private session to be?");
+	message.author.send("What time & date do you wish the private session to be?");
         console.log(collector)
         let time = collector.on('collect', message => {
             });
