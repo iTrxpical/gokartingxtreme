@@ -25,8 +25,7 @@ client.on('message', message => {
     }
     
     if (message.channel.id === '422091691604967425') {
-        wait(5)
-        message.delete(30)
+        message.delete()
     }
 
         let msg = message.content.toLowerCase();
