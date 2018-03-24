@@ -5,8 +5,7 @@ exports.run = (Discord, client, message, args) => {
     var embedping = new Discord.RichEmbed()
         .setColor(randomColor)
         .addField(":ping_pong: Pongy!", new Date().getTime() - message.createdTimestamp + " ms")
-    message.author.sendEmbed(embedping)
-    message.reply("Check your DMs!")
+    message.channel.send(embedping)
     message.delete(10000)
     .then(message.channel.bulkDelete(1))
   }
