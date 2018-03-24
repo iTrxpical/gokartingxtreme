@@ -20,7 +20,7 @@ client.on('message', message => {
     
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("Unfortunately we can only read things our guild (server). Please join our server (code: GR9qVVd) to use the bot! ")
+        message.channel.send("Error: 404 Please only use cmds in our server. https://giphy.com/gifs/blue-screen-gU25raLP4pUu4")
         return;
     }
     
