@@ -9,9 +9,8 @@ const prefix = '=';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    //client.user.setActivity('1000 Members! | =help', { type: 'STREAMING' });
-    //client.user.setStatus("online");
-    client.change_status(game=discord.Game(name="1000 Members! | =help", url="twitch.tv/roblox", type=1))
+    client.user.setActivity('1000 Members! | =help', { type: 'WATCHING' });
+    client.user.setStatus("online");
 });
 
 
