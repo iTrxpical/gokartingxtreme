@@ -9,7 +9,7 @@ const prefix = '=';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('1000 Members! | =help', { type: 'PLAYING' });
+    client.user.setActivity('Go-Karting Xtreme with 1000 members! | =help', { type: 'PLAYING' });
     client.user.setStatus("idle");
 });
 
