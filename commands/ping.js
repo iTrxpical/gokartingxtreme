@@ -6,5 +6,5 @@ exports.run = (Discord, client, message, args) => {
         .setColor(randomColor)
         .addField(":ping_pong: Pongy!", new Date().getTime() - message.createdTimestamp + " ms")
     message.channel.send(embedping)
-    message.delete(10000)
+    .then(m=>m.delete(10000))
   }
