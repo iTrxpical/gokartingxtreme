@@ -22,8 +22,8 @@ client.on('message', message => {
     if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
         .setTitle('Error 404:')
-        .setDescription('Our system can only detect things in the GKX guild. Join our server, code: `jBENN5z`!')
-        .setImage('https://gph.to/2INNUFG')
+        .setDescription('Our system can only detect things in the GKX guild. Join our server, with the code: `jBENN5z`!')
+        .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
         .setFooter('Error 404: DM Message | Made by TheReal (Catty)');
         message.channel.send(embederrordm);
         return;
