@@ -2,7 +2,7 @@ exports.run(Discord, client, message, args, collector) => {
 
 	 if message.author.send.id == '281060171730649089'
      let bookEmbed = new Discord.RichEmbed()
-    .setTitle(":loudspeaker: Weekly Opening Hours:)
+    .setTitle(":loudspeaker: Weekly Opening Hours:")
     .setDescription("Below are the opening hours for Go-Karting Xtreme (GMT))
     .setColor("#15f153")
     .addField("Monday:","1800-2000")
