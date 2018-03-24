@@ -25,7 +25,7 @@ client.on('message', message => {
         .setDescription('Our system can only detect things in the GKX guild. Join our server (code: ')
         .setImage('https://giphy.com/gifs/blue-screen-gU25raLP4pUu4')
         .setFooter('Error 404: DM Message | Made by TheReal (Catty)', 'https://t7.rbxcdn.com/fe33fe198b2630c5d582ac2e039e96cf');
-        message.channel.send(embedrrordm);
+        message.channel.send(embederrordm);
         return;
     }
     
