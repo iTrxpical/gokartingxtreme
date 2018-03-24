@@ -9,8 +9,9 @@ const prefix = '=';
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('1000 Members! | =help', { type: 'STREAMING' });
-    client.user.setStatus("dnd");
+   // client.user.setActivity('1000 Members! | =help', { type: 'STREAMING' });
+    await client.change_status(game=discord.Game(name="1K Members | =help ", url="twitch.tv/streamer", type=1))
+   //client.user.setStatus("online");
 });
 
 
