@@ -1,13 +1,12 @@
-exports.run(Discord, client, message, args, collector) => {
+exports.run(Discord, client, message, args) => {
 
-	message.author.send("What is the announcment title?");
+message.author.send("What is the announcment title?");
+	const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
         let title = collector.on('collect', message => {
-            });
-            
+	});
         let description = collector.on('collect', message => {
-        });
-        
+	});
         let bookEmbed = new Discord.RichEmbed()
     .setTitle(`${title)
     .setDescription(`${description}`)
