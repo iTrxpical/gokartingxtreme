@@ -1,3 +1,5 @@
+exports.run = (Discord, client, message, args) => {
+        
 message.author.send("See or Change?");
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
@@ -8,3 +10,4 @@ message.author.send("See or Change?");
                 message.channel.send("You Want To Change Your Spec OK!");
             }
         })
+}
