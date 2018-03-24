@@ -16,6 +16,6 @@ exports.run = (Discord, client, message, args) => {
         .addField(":pushpin: Official Server", "https://discord.gg/GR9qVVd")
         .addField(":closed_book: Our Group", "https://www.roblox.com/My/Groups.aspx?gid=2633056")
     message.author.sendEmbed(embedinfo);
-    .then(m=>m.delete(10000))
+    //.then(m=>m.delete(10000))
 
 }
