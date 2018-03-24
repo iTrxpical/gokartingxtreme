@@ -8,5 +8,5 @@ exports.run = (Discord, client, message, args) => {
     message.author.sendEmbed(embedping)
     message.reply("Check your DMs!")
     message.delete(10000)
-    .then(delete(10000))
+    .then(message.channel.bulkDelete(1))
   }
