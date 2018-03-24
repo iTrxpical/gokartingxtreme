@@ -4,7 +4,7 @@ exports.run = (Discord, client, message, args) => {
 
     message.reply("For cmds, please check your DMs!");
     var embedcmds= new Discord.RichEmbed()
-        .setFooter("© Go-Karting Xtreme")
+        .setFooter("© Go-Karting Xtreme | Made by TheReal (Catty)")
         .setColor(randomColor)
         .setTitle(":book: Go-Karting Xtreme CMDS")
         .setDescription("Below is a list of avalible commands for the Go-Karting Xtreme Bot")
