@@ -1,5 +1,5 @@
 exports.run(Discord, client, message, args) => {
-  message.reply("For booking details please check your DMs!");
+	
 	let embedtitle = new Discord.RichEmbed()
   .setTitle("Go-Karting Xtreme")
   .setColor("#15f153")
@@ -41,5 +41,4 @@ exports.run(Discord, client, message, args) => {
   message.author.sendEmbed(embedgold);
   message.author.sendEmbed(embedsilver);
   message.author.sendEmbed(embedbronze);
-  message.delete(10000)
 }
