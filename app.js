@@ -24,7 +24,7 @@ client.on('message', message => {
            message.delete(500)
         } else {
            message.delete()
-    }
+    }}
     
     if (sender.bot) return;
    
