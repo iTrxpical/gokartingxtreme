@@ -7,6 +7,7 @@ const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = '=';
 
+initialize () {
 ready () {
 console.log(`Shard ${process.env.SHARD_ID} is ready, serving ${this.bot.guilds.array().length} guilds.`)
      switch (currentActivity) {
