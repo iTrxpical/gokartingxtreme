@@ -30,6 +30,10 @@ client.on('message', message => {
         message.channel.send(embederrordm);
         return;
     }
+   
+   if (message.message.mentions.members.first().id === '422393536420511752') {
+    message.channel.send(':zzz: :zzz: Ahhhh! :sleeping: You woke me. If you need me, please use the command `=info`!')
+   }
     
     if (message.channel.id === '422091691604967425') {
         message.delete()
