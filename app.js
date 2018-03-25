@@ -2,13 +2,13 @@
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
 // Discord Code: GR9qVVd
 
-const Discord = require('discord.js');
-const client = new Discord.Client();
-const db = require('quick.db');
-const prefix = '=';
+//const Discord = require('discord.js');
+//const client = new Discord.Client();
+//const db = require('quick.db');
+//const prefix = '=';
 
    
-client.on('ready', () => {
+//client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setActivity('Go-Karting Xtreme with 1000 members! | =help', { type: 'PLAYING' });
     client.user.setStatus("dnd");
