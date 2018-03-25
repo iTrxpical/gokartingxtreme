@@ -7,32 +7,11 @@ const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = '=';
 
-on.ready () {
-console.log(`Shard ${process.env.SHARD_ID} is ready, serving ${this.bot.guilds.array().length} guilds.`)
-     switch (currentActivity) {
-        case 0:
-          this.bot.user.setActivity('http://eryn.io/RoVer')
-          break
-        case 1:
-          this.bot.user.setActivity(`1000 Group Members`, { type: 'WATCHING' })
-          break
-        case 2:
-          this.bot.user.setActivity(`With 1000 group members!'} users`, { type: 'PLAYING' })
-          break
-        case 3:
-          this.bot.user.setActivity('=help', { type: 'LISTENING' })
-          break
-      }
-    }, 15000)
-
-    this.bot.user.setActivity('Go-Karting Xtreme')
-  
-
    
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    //client.user.setActivity('Go-Karting Xtreme with 1000 members! | =help', { type: 'PLAYING' });
-    //client.user.setStatus("dnd");
+    client.user.setActivity('Go-Karting Xtreme with 1000 members! | =help', { type: 'PLAYING' });
+    lient.user.setStatus("dnd");
 });
 
 
