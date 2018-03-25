@@ -5,5 +5,5 @@ exports.run = (Discord, client, message, args) => {
     //var embedping = new Discord.RichEmbed()
         //.setColor(randomColor)
        // .addField("Yes!", "I can't wait.")
-    message.channel.send("Please react below with :ballot_box_with_check: if you are attending!)
+    message.channel.send("Please react below with :ballot_box_with_check: if you are attending!")
 }
