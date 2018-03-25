@@ -8,7 +8,7 @@ const db = require('quick.db');
 const prefix = '=';
 
 initialize () {
-ready () {
+on.ready () {
 console.log(`Shard ${process.env.SHARD_ID} is ready, serving ${this.bot.guilds.array().length} guilds.`)
      switch (currentActivity) {
         case 0:
