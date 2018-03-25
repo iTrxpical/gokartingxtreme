@@ -17,13 +17,17 @@ client.on('ready', () => {
 
 client.on('message', message => {    
     
-       if (message.channel.id === '422091691604967425') {
-        message.delete()
-    }
+       let sender = message.author;
    
-    let sender = message.author;
+       if (message.channel.id === '422091691604967425') {
+        if (sender.bot) {
+           message.delete(500)
+        } else {
+           message.delete()
+    }
     
     if (sender.bot) return;
+   
     if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
         .setTitle('Error 404:')
