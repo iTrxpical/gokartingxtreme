@@ -18,7 +18,7 @@ client.on('ready', () => {
 client.on('message', message => {    
     
        let sender = message.author;
-       let allowedRole = message.guild.roles.find("name", "Board of Exectuives");
+       let allowedRole = message.guild.roles.find("name", "Board of Executives");
        let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
 
        if (message.channel.id === '422091691604967425') {
