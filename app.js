@@ -12,7 +12,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setActivity('over Go-Karting Xtreme | =help', { type: 'WATCHING' });
     client.user.setStatus("online");
-    client.user.setAvatar('https://lh5.googleusercontent.com/YPh3jGsNfOcSYMDPBL_gZA7pRxnntj_HCELsewakqLuNBDpNOC6Cm1ElTpisBKsqY32SGXzpsuvaRu0w7SO2=w1680-h913');
+    client.user.setAvatar('https://t7.rbxcdn.com/fe33fe198b2630c5d582ac2e039e96cf');
 });
 
 
