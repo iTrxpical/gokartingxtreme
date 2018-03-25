@@ -7,7 +7,6 @@ const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = '=';
 
-initialize () {
 on.ready () {
 console.log(`Shard ${process.env.SHARD_ID} is ready, serving ${this.bot.guilds.array().length} guilds.`)
      switch (currentActivity) {
@@ -27,7 +26,7 @@ console.log(`Shard ${process.env.SHARD_ID} is ready, serving ${this.bot.guilds.a
     }, 15000)
 
     this.bot.user.setActivity('Go-Karting Xtreme')
-  }
+  
 
    
 client.on('ready', () => {
