@@ -13,7 +13,7 @@ client.on('ready', () => {
     client.user.setActivity('over Go-Karting Xtreme | =help', { type: 'WATCHING' });
     sleep(5000);
     client.user.setActivity('Go-Karting Xtreme | =help', { type: 'PLAYING });
-    client.user.setStatus("dnd");
+    client.user.setStatus("online");
     client.user.setAvatar('https://lh5.googleusercontent.com/YPh3jGsNfOcSYMDPBL_gZA7pRxnntj_HCELsewakqLuNBDpNOC6Cm1ElTpisBKsqY32SGXzpsuvaRu0w7SO2=w1680-h913');
 });
 
