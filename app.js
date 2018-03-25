@@ -17,6 +17,10 @@ client.on('ready', () => {
 
 client.on('message', message => {    
     
+       if (message.channel.id === '422091691604967425') {
+        message.delete()
+    }
+   
     let sender = message.author;
     
     if (sender.bot) return;
@@ -34,10 +38,6 @@ client.on('message', message => {
    if (message.mentions.members.firstKey() === '422393536420511752') {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. If you need me, please use the command `=info`!')
    }
-    
-    if (message.channel.id === '422091691604967425') {
-        message.delete()
-    }
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
