@@ -21,7 +21,7 @@ client.on('message', message => {
    
        if (message.channel.id === '422091691604967425') {
         if (sender.bot) {
-           message.delete(500)
+           message.delete(5000)
         } else {
            message.delete()
     }}
