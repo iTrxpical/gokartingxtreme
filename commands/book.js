@@ -37,8 +37,8 @@ exports.run(Discord, client, message, args) => {
     .addField("Race Types", "Free time, races avalible")
     .addField("Price", "R$150")
   
-  message.author.sendEmbed(embedtitle);
-  message.author.sendEmbed(embedgold);
-  message.author.sendEmbed(embedsilver);
-  message.author.sendEmbed(embedbronze);
+  message.channel.sendEmbed(embedtitle);
+  message.channel.sendEmbed(embedgold);
+  message.channel.sendEmbed(embedsilver);
+  message.channel.sendEmbed(embedbronze);
 }
