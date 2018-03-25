@@ -18,11 +18,14 @@ client.on('ready', () => {
 client.on('message', message => {    
     
        let sender = message.author;
-   
+       let allowedRole = message.guild.roles.find("name", "Board of Exectuives");
+       let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
+
        if (message.channel.id === '422091691604967425') {
         if (sender.bot) {
            message.delete(5000)
-        } else if (message.member.roles.find("name", "Admin") {
+        } else if (message.member.roles.has(allowedRole.id) {
+        } else if (message.member.roles.has(allowedRoleTwo.id) {
         } else {
         message.delete()
     }}
