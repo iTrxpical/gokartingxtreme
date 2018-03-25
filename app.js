@@ -12,7 +12,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setActivity('over Go-Karting Xtreme | =help', { type: 'WATCHING' });
     client.user.setStatus("dnd");
-    client.user.setAvatar('https://lh5.googleusercontent.com/ZfqwjUun5ShGL3QvZG2uf7vuTAeEFzWAsuLdy7Xz4p-x8pjeaiseTKTqlCTszndAgfoRaLz7vAG5B6Gzpw7u=w1680-h913');
+    client.user.setAvatar('https://lh5.googleusercontent.com/YPh3jGsNfOcSYMDPBL_gZA7pRxnntj_HCELsewakqLuNBDpNOC6Cm1ElTpisBKsqY32SGXzpsuvaRu0w7SO2=w1680-h913');
 });
 
 
