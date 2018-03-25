@@ -22,8 +22,9 @@ client.on('message', message => {
        if (message.channel.id === '422091691604967425') {
         if (sender.bot) {
            message.delete(5000)
+        } else if (message.member.roles.find("name", "Admin") {
         } else {
-           message.delete()
+        message.delete()
     }}
     
     if (sender.bot) return;
