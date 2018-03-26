@@ -5,6 +5,6 @@ exports.run = (Discord, client, message, args) => {
     var embedping = new Discord.RichEmbed()
         .setColor(randomColor)
         .addField("Error 404: Unavalible","AaronnSmh and danfrostythesnowman3 are currently offline, if you require further assistance please call our helpline at 999 - Thanks, dan and aaron")
-    message.channel.send("Not me!")
+    message.channel.send("Help line is down, please contact us at a later date.")
     //message.channel.send(embedping)
   }
