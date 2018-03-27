@@ -33,7 +33,7 @@ exports.run = (Discord, client, message, args) => {
     message.channel.sendEmbed(embedsilver);
     var embedbronze= new Discord.RichEmbed()
   .setTitle("Bronze") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
-    .setColor("#C0C0C0")
+    .setColor("#CD7F32")
     .setDescription("Bronze Plan Details:")
     .addField("Session Time", "30 minutes")
     .addField("Racer Amount", "15 racers maximum")
