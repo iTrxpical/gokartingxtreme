@@ -15,7 +15,7 @@ exports.run = (Discord, client, message, args) => {
   .setTitle("Gold") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
     .setColor("#FFD700")
     .setDescription("Gold Plan Details:")
-    .addField("Session Time", "60 minutes")
+    .addField("Session Time", "90 minutes")
     .addField("Racer Amount", "40 racers maximum")
     .addField("Staff", "At least 8 working staff members")
     .addField("Race Types", "Free time, races, bumper karts, wrong-way-racing and showdown avalible")
