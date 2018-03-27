@@ -8,10 +8,8 @@ let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer")
 
        if(message.member.roles.has(allowedRole.id)) {
          message.channel.send("Test")
-       } else if (sender.bot) {
-         message.delete(5000)
        } else {
-         message.channel.send("You need to be a BoX to use this command!")
+         message.channel.send(":gear: Our furious workers (TheReal) are working hard to make something, don't try again please!")
          message.delete()
          .then(m=>m.delete(10000))
 }}
