@@ -2,7 +2,7 @@ var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 exports.run = (Discord, client, message, args) => {
 
-    message.reply("Private Booking Details:");
+    message.channel.send("Private Booking Details:");
     var embedinfo = new Discord.RichEmbed()
   .setTitle("Go-Karting Xtreme")
   .setColor("#15f153")
