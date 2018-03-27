@@ -11,7 +11,7 @@ let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer")
        } else if (sender.bot) {
          message.delete(5000)
        } else {
-         message.channel.sent("You need to be a BoX to use this command!")
+         message.channel.send("You need to be a BoX to use this command!")
          message.delete()
          .then(m=>m.delete(10000))
 }}
