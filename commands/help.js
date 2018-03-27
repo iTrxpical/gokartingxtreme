@@ -8,6 +8,7 @@ exports.run = (Discord, client, message, args) => {
         .setTitle(":exclamation: Help")
         .setDescription("Please run =info for GKX information.")
     message.channel.sendEmbed(embedinfo);
-    message.delete(10000)
+    message.delete(0)
+    .then(m=>m.delete(10000)
 
 }
