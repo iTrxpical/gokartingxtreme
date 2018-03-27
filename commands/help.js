@@ -9,6 +9,6 @@ exports.run = (Discord, client, message, args) => {
         .setDescription("Please run =info for GKX information.")
     message.channel.sendEmbed(embedinfo);
     message.delete(0)
-    .then(m=>m.delete(10000)
+    .then(m=>m.delete(10000))
 
 }
