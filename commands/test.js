@@ -13,6 +13,4 @@ let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer")
          message.delete()
          .then(m=>m.delete(10000))
 }}
-
-    
- 
+}
