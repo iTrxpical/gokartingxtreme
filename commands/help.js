@@ -6,7 +6,7 @@ exports.run = (Discord, client, message, args) => {
         .setFooter("© Go-Karting Xtreme | Made by TheReal (Catty)")
         .setColor(randomColor)
         .setTitle(":exclamation: Help")
-        .setDescription("Please run =info for help.")
+        .setDescription("Please run =info for GKX information.")
     message.channel.sendEmbed(embedinfo);
     message.delete(10000)
 
