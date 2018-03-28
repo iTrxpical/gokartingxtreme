@@ -66,7 +66,7 @@ client.on('message', message => {
 
         } finally {
 
-            console.log(`${message.author.username} ${message.author.id} ran the command: ${cmd} sucessfully!`);
+            console.log(`${message.author.username} ${message.author.id} ran the command: ${cmd} probably unsuccsesfully!`);
 
         }
     })
