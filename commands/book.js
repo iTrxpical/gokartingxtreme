@@ -1,4 +1,4 @@
-exports.run(Discord, client, message, args) => {
+exports.run = (Discord, client, message, args) => {
 
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
