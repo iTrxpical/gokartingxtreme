@@ -5,21 +5,24 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
         collector.on('collect', message => {
      	message.channel.send("What plan do you wish to book?");
             if (message.content === "Gold") {
-                message.channel.send("You Want To See Someones Spec OK!");
+		var type = 'Gold'
+                message.channel.send("Gold: :white_check_mark:");
+		message.channel.send("Silver: :negative_squared_cross_mark:");
+		message.channel.send("Bronze: :negative_squared_cross_mark:");
             } else if (message.content === "Silver") {
-                message.channel.send("You Want To Change Your Spec OK!");
+               	message.channel.send("Gold: :negative_squared_cross_mark:"); 
+		message.channel.send("Silver: :white_check_mark:");
+		message.channel.send("Bronze: :negative_squared_cross_mark:");
+		var type = 'Silver'
             } else if (message.content === "Bronze") {
-		    
+                message.channel.send("Gold: :negative_squared_cross_mark:");
+		message.channel.send("Silver: :negative_squared_cross_mark:");
+		message.channel.send("Bronze: :white_check_mark:");
+		var type = 'Bronze'
 	    }
-	message.author.send("What time & date do you wish the private session to be?");
-        console.log(collector)
-        let time = collector.on('collect', message => {
-            });
+	message.channel.send("What time do you wish it to be");
+
         let bookname = message.author;
-        message.author.send("Any Comments?")
-        console.log(collector)
-        let notes = collector.on('collect', message => {
-        });
         
         let bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
