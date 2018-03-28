@@ -1,6 +1,6 @@
+
+
 exports.run(Discord, client, message, args) => {
-
-
 message.author.send("Hi there! What session would plan would you liek to book? Options are: 'GOLD', 'SILVER' and 'BRONZE'. Say 'cancel' to cancel.");
         const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
         console.log(collector)
@@ -28,6 +28,5 @@ message.author.send("Hi there! What session would plan would you liek to book? O
             });
                 let bookname = message.author;
             }
-        })
-        
+        })    
 }
