@@ -1,7 +1,6 @@
 exports.run = (Discord, client, message, args) => {
 
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        console.log(collector)
         collector.on('collect', message => {
      	message.channel.send("What plan do you wish to book?");
             if (message.content === "Gold") {
