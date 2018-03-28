@@ -33,6 +33,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 			     
         let bookname = message.author;
     
+function embedBoox() {
     var bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
@@ -46,5 +47,8 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     if(!bookingchannel) return message.channel.send("There has been an error with our system, contact TheReal_CatCrafter to check the problem out.");
     bookingchannel.send(bookEmbed);
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
+}
+
+setTimeout(embedBoox, 5000);
     
 }
