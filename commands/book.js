@@ -31,8 +31,8 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     .addField("Booker", `${bookname} with ID: ${bookname.id}`)
     .addField("Time & Date", `${time}`)
     .addField("Booked At", message.createdAt)
-    .addField("Notes", `${notes}`);
-    .setFooter("Private Booking V1.0")
+    .addField("Notes", `${notes}`)
+    .setFooter("Private Booking V1.0");
 
     let bookingchannel = message.guild.channels.find(`name`, "private-hire");
     if(!bookingchannel) return message.channel.send("There has been an error with our system, contact TheReal_CatCrafter to check the problem out.");
