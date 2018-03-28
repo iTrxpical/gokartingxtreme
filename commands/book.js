@@ -36,8 +36,8 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
     .setColor("#15f153")
-    .addField("Booker", `${bookname} with ID: ${bookname.id}`)
-    .addField("Type", `&{type}`)
+    .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
+    .addField("Type", &{type})
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
