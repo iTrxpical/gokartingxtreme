@@ -37,7 +37,7 @@ exports.run = (Discord, client, message, args) => {
     .setDescription("Bronze Plan Details:")
     .addField("Session Time", "30 minutes (1 Mini Session)")
     .addField("Racer Amount", "15 racers maximum")
-    .addField("Staff", "At least 4 working staff members")
+    .addField("Staff", "4 staff members")
     .addField("Race Types", "Free time, races avalible")
     .addField("Price", "R$199")
     message.channel.sendEmbed(embedbronze);
