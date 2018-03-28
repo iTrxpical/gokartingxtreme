@@ -4,7 +4,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
            message.channel.send("What plan do you wish to book?");
 	        collector.on('collect', message => {
             if (message.content === "Gold") {
-		var type = 'Gold'
+		let type = 'Gold'
                     var embedgold = new Discord.RichEmbed()
 		.addField("Gold:", ":white_check_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
@@ -18,7 +18,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#C0C0C0")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedsilver)
-		var type = 'Silver'
+		let type = 'Silver'
             } else if (message.content === "Bronze") {
                     var embedbronze = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
@@ -26,7 +26,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#CD7F32")
 		.addField("Bronze:", ":white_check_mark:");
 		message.channel.send(embedbronze)
-		var type = 'Bronze'
+		let type = 'Bronze'
 	    }
 		})
 			     
@@ -37,7 +37,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     .setDescription("Private Booking")
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
-    .addField("Type", &{type})
+    .addField("Type", {type})
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
