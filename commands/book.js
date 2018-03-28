@@ -8,12 +8,14 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
                     var embedgold = new Discord.RichEmbed()
 		.addField("Gold:", ":white_check_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
+		.setColor("#FFD700")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedgold)
             } else if (message.content === "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
 		.addField("Silver:", ":white_check_mark:")
+		.setColor("#C0C0C0")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedsilver)
 		var type = 'Silver'
@@ -21,6 +23,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
                     var embedbronze = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
+		.setColor("#CD7F32")
 		.addField("Bronze:", ":white_check_mark:");
 		message.channel.send(embedbronze)
 		var type = 'Bronze'
@@ -29,7 +32,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 			     
         let bookname = message.author;
         
-    var bookEmbed = new Discord.RichEmbed()
+    var embedping = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
     .setColor("#15f153")
