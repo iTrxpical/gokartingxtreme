@@ -1,0 +1,7 @@
+exports.run(Discord, client, message, args) => {
+var member= message.mentions.members.first();
+member.kick().then((member) => {
+message.channel.send(":wave: " + member.displayName + " has been successfully kicked :point_right: ");
+ }).catch(() => {message.channel.send("Access Denied");
+        });
+    }
