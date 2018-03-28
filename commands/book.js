@@ -1,11 +1,10 @@
 exports.run = (Discord, client, message, args) => {
 
-var type = 'NonDefined';
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
            message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content === "Gold") {
-		let type = 'Gold'
+		var type = 'Gold'
                     var embedgold = new Discord.RichEmbed()
 		.addField("Gold:", ":white_check_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
@@ -19,7 +18,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#C0C0C0")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedsilver)
-		let type = 'Silver'
+		var type = 'Silver'
             } else if (message.content === "Bronze") {
                     var embedbronze = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
@@ -27,7 +26,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#CD7F32")
 		.addField("Bronze:", ":white_check_mark:");
 		message.channel.send(embedbronze)
-		let type = 'Bronze'
+		var type = 'Bronze'
 	    }
 		})
 			     
