@@ -39,5 +39,5 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     bookingchannel.send(bookEmbed);
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
     
-)}
+})
 }
