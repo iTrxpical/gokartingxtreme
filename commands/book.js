@@ -2,7 +2,7 @@ exports.run = (Discord, client, message, args) => {
 
 var type = 'NonDefined';
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-           message.channel.send("What plan do you wish to book?");
+           message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content === "Gold") {
 		let type = 'Gold'
@@ -32,7 +32,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		})
 			     
         let bookname = message.author;
-        
+    
     var bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
