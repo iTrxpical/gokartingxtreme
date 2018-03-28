@@ -20,10 +20,6 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		var type = 'Bronze'
 	    }
 		})
-	message.channel.send("What time do you wish it to be");
-	        collector.on('collect', message => {
-		var = message.content;
-	    })
 			     
         let bookname = message.author;
         
@@ -33,7 +29,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     .setColor("#15f153")
     .addField("Booker", `${bookname} with ID: ${bookname.id}`)
     .addField("Type", `&{type})
-    .addField("Time & Date", `${time}`)
+   // .addField("Time & Date", `${time}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
