@@ -1,8 +1,8 @@
 exports.run = (Discord, client, message, args) => {
 
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
-        collector.on('collect', message => {
-     	message.channel.send("What plan do you wish to book?");
+           message.channel.send("What plan do you wish to book?");
+	        collector.on('collect', message => {
             if (message.content === "Gold") {
 		var type = 'Gold'
                 message.channel.send("Gold: :white_check_mark:");
@@ -18,9 +18,12 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send("Silver: :negative_squared_cross_mark:");
 		message.channel.send("Bronze: :white_check_mark:");
 		var type = 'Bronze'
-	    }
+	    }}
 	message.channel.send("What time do you wish it to be");
-
+	        collector.on('collect', message => {
+		var = message.content;
+	    }
+			     
         let bookname = message.author;
         
     var embedping = new Discord.RichEmbed()
@@ -28,9 +31,9 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
     .setDescription("Private Booking")
     .setColor("#15f153")
     .addField("Booker", `${bookname} with ID: ${bookname.id}`)
+    .addField("Type", `&{type})
     .addField("Time & Date", `${time}`)
     .addField("Booked At", message.createdAt)
-    .addField("Notes", `${notes}`)
     .setFooter("Private Booking V1.0");
 
     let bookingchannel = message.guild.channels.find(`name`, "private-hire");
