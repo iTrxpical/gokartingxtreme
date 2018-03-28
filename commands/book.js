@@ -1,5 +1,7 @@
 exports.run = (Discord, client, message, args) => {
 
+	var type = 'TEST';
+	
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
            message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
