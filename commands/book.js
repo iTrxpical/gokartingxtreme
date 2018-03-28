@@ -5,18 +5,24 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 	        collector.on('collect', message => {
             if (message.content === "Gold") {
 		var type = 'Gold'
-                message.channel.send("Gold: :white_check_mark:");
-		message.channel.send("Silver: :negative_squared_cross_mark:");
-		message.channel.send("Bronze: :negative_squared_cross_mark:");
+                    var embedgold = new Discord.RichEmbed()
+		.addField("Gold:", ":white_check_mark:")
+		.addField("Silver:", ":negative_squared_cross_mark:")
+		.addField("Bronze:", ":negative_squared_cross_mark:");
+		message.channel.send(embedgold)
             } else if (message.content === "Silver") {
-               	message.channel.send("Gold: :negative_squared_cross_mark:"); 
-		message.channel.send("Silver: :white_check_mark:");
-		message.channel.send("Bronze: :negative_squared_cross_mark:");
+                    var embedsilver = new Discord.RichEmbed()
+		.addField("Gold:", ":negative_squared_cross_mark:")
+		.addField("Silver:", ":white_check_mark:")
+		.addField("Bronze:", ":negative_squared_cross_mark:");
+		message.channel.send(embedsilver)
 		var type = 'Silver'
             } else if (message.content === "Bronze") {
-                message.channel.send("Gold: :negative_squared_cross_mark:");
-		message.channel.send("Silver: :negative_squared_cross_mark:");
-		message.channel.send("Bronze: :white_check_mark:");
+                    var embedbronze = new Discord.RichEmbed()
+		.addField("Gold:", ":negative_squared_cross_mark:")
+		.addField("Silver:", ":negative_squared_cross_mark:")
+		.addField("Bronze:", ":white_check_mark:");
+		message.channel.send(embedbronze)
 		var type = 'Bronze'
 	    }
 		})
