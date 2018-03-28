@@ -19,11 +19,11 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send("Bronze: :white_check_mark:");
 		var type = 'Bronze'
 	    }
-		)}
+		})
 	message.channel.send("What time do you wish it to be");
 	        collector.on('collect', message => {
 		var = message.content;
-	    )}
+	    })
 			     
         let bookname = message.author;
         
