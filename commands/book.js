@@ -32,7 +32,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 			     
         let bookname = message.author;
         
-    var embedping = new Discord.RichEmbed()
+    var bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
     .setColor("#15f153")
