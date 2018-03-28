@@ -15,31 +15,31 @@ exports.run = (Discord, client, message, args) => {
   .setTitle("Gold") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
     .setColor("#FFD700")
     .setDescription("Gold Plan Details:")
-    .addField("Session Time", "90 minutes")
+    .addField("Session Time", "90 minutes (3 Mini Sessions)")
     .addField("Racer Amount", "40 racers maximum")
-    .addField("Staff", "At least 8 working staff members")
+    .addField("Staff", "8 staff members")
     .addField("Race Types", "Free time, races, bumper karts, wrong-way-racing and showdown avalible")
-    .addField("Price", "R$400 (SALE)")
+    .addField("Price", "R$399 (SALE)")
     message.channel.sendEmbed(embedgold);
     var embedsilver = new Discord.RichEmbed()
   .setTitle("Silver") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
     .setColor("#C0C0C0")
     .setDescription("Silver Plan Details:")
-    .addField("Session Time", "60 minutes")
-    .addField("Racer Amount", "20 racers maximum")
-    .addField("Staff", "At least 6 working staff members")
+    .addField("Session Time", "60 minutes (2 Mini Sessions)")
+    .addField("Racer Amount", "25 racers maximum")
+    .addField("Staff", "6 staff members")
     .addField("Race Types", "Free time, races and showdown avalible")
-    .addField("Price", "R$250")
+    .addField("Price", "R$299 (SALE)")
     message.channel.sendEmbed(embedsilver);
     var embedbronze= new Discord.RichEmbed()
   .setTitle("Bronze") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
     .setColor("#CD7F32")
     .setDescription("Bronze Plan Details:")
-    .addField("Session Time", "30 minutes")
+    .addField("Session Time", "30 minutes (1 Mini Session)")
     .addField("Racer Amount", "15 racers maximum")
     .addField("Staff", "At least 4 working staff members")
     .addField("Race Types", "Free time, races avalible")
-    .addField("Price", "R$150")
+    .addField("Price", "R$199")
     message.channel.sendEmbed(embedbronze);
 
 }
