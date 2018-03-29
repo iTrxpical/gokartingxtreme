@@ -37,6 +37,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Time:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
+	})
 		message.channel.send("What date do you wish it to be? (Format: DD-MM-YY (**- not /**))");
 	  collector.on('collect', message => {
 		date = message.content
@@ -44,7 +45,6 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Date:", `${date}`)
 		message.channel.send(embeddate)
 		message.channel.delete
-		})
 		})
 
 	  } else if (message.content == "Silver") {
