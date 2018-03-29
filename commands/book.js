@@ -87,9 +87,7 @@ function embedBook() {
     if(!bookingchannel) return message.channel.send("There has been an error with our system, contact TheReal_CatCrafter to check the problem out.");
     bookingchannel.send(bookEmbed);
     message.reply("Your booking has been placed! Expect a DM from our team shortly!");
-    message.author.send("Here is a recepit of your booking!");
-    message.reply(embedBook)
-    .then(m=>m.delete(10000));
+    message.author.send("Your booking has been confirmed by our system, a BoX+ will contact you soon! Have a good day sir/ma'am.");
 }
 setTimeout(embedBook,2e4)
 }
