@@ -88,7 +88,8 @@ function embedBook() {
     bookingchannel.send(bookEmbed);
     message.reply("Your booking has been placed! Expect a DM from our team shortly!");
     message.author.send("Here is a recepit of your booking!");
-    message.author.sendEmbed(embedBook);
+    message.reply(embedBook);
+    .then(m=>m.delete(10000))
 }
 setTimeout(embedBook,2e4)
 }
