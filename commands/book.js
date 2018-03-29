@@ -5,7 +5,7 @@ var type = "";
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
            message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
-            if (message.content.toLowerCase() === "Gold") {
+            if (message.content === "Gold") {
 		type = 'Gold'
                     var embedgold = new Discord.RichEmbed()
 		.addField("Gold:", ":white_check_mark:")
@@ -13,7 +13,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#FFD700")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedgold)
-            } else if (message.content.toLowerCase() === "Silver") {
+            } else if (message.content === "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
 		.addField("Silver:", ":white_check_mark:")
@@ -21,7 +21,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedsilver)
 		type = 'Silver'
-            } else if (message.content.toLowerCase() === "Bronze") {
+            } else if (message.content === "Bronze") {
                     var embedbronze = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
@@ -49,7 +49,5 @@ function embedBook() {
     bookingchannel.send(bookEmbed);
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
 }
-
-setTimeout(embedBook, 20000);
-    
+setTimeout(embedBook,2e4)
 }
