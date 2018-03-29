@@ -56,6 +56,7 @@ function embedBook() {
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
+    .addField("Time", `${time}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
