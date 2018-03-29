@@ -30,7 +30,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedgold)
 		message.delete()
-		message.channel.send("What time do you wish it to be? (Include timezone)");
+		message.channel.send("What date & time do you wish it to be? (Include Timezone / DD-MM-YY)");
 	  collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
@@ -38,14 +38,6 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedtime)
 		message.delete()
 	})
-		message.channel.send("What date do you wish it to be? (Format: DD-MM-YY (**- not /**))");
-	  collector.on('collect', message => {
-		date = message.content
-		var embeddate = new Discord.RichEmbed()
-		.addField("Date:", `${date}`)
-		message.channel.send(embeddate)
-		message.channel.delete
-		})
 
 	  } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
