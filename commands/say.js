@@ -15,5 +15,5 @@ let allowedRole = message.guild.roles.find("name", "Board Of Executives");
          message.channel.send("This command is limited to BOX only.")
          message.delete()
          .then(m=>m.delete(10000))
-}}
+       }
 }
