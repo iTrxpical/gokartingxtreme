@@ -25,7 +25,11 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedgold)
 		message.delete()
 		message.channel.send("What time do you wish it to be? (Include timezone)");
+	        collector.on('collect', message => {
 		time = message.content
+		var embedtime = new Discord.RichEmbed()
+		.addField("Time:", `${time}`)
+		message.channel.send(embedtime)
 	  } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
