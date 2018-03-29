@@ -1,5 +1,11 @@
 exports.run = (Discord, client, message, args) => {
 
+	if (message.channel.id === '368417914459783171') {
+	message.delete()
+	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")	
+	.then(m=>m.delete(10000))
+	}
+	
 var type = "";	
 	
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
@@ -30,6 +36,11 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedbronze)
 		type = 'Bronze'
 	    }
+		})
+           
+	message.channel.send("What time do you want the private session to be?");
+	        collector.on('collect', message => {
+			
 		})
 			     
         let bookname = message.author;
