@@ -1,7 +1,8 @@
 exports.run = (Discord, client, message, args) => {
 
-	if (message.channel.id !== '368417914459783171') {
+	if (message.channel.id === '368417914459783171') {
 	message.delete()
+	} else {
 	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")	
 	.then(m=>m.delete(10000))
 	return;
@@ -21,6 +22,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#FFD700")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedgold)
+		message.delete()
             } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
@@ -28,6 +30,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#C0C0C0")
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedsilver)
+		message.delete()
 		type = 'Silver'
             } else if (message.content == "Bronze") {
                     var embedbronze = new Discord.RichEmbed()
@@ -36,6 +39,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.setColor("#CD7F32")
 		.addField("Bronze:", ":white_check_mark:");
 		message.channel.send(embedbronze)
+		message.delete()
 		type = 'Bronze'
 	    }
 		})
