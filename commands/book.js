@@ -30,6 +30,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		var embedtime = new Discord.RichEmbed()
 		.addField("Time:", `${time}`)
 		message.channel.send(embedtime)
+		})
 	  } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
