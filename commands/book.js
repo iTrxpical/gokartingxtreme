@@ -75,8 +75,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 
 function embedBook() {
     var bookEmbed = new Discord.RichEmbed()
-    .setTitle("Go Karting Xtreme")
-    .setDescription("Private Booking")
+    .setTitle("Go Karting Xtreme ~ Private Session")
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
@@ -87,7 +86,9 @@ function embedBook() {
     let bookingchannel = message.guild.channels.find(`name`, "private-hire");
     if(!bookingchannel) return message.channel.send("There has been an error with our system, contact TheReal_CatCrafter to check the problem out.");
     bookingchannel.send(bookEmbed);
-    message.reply("Your booking has been placed! Expect a DM from our team shortly!")
+    message.reply("Your booking has been placed! Expect a DM from our team shortly!");
+    message.author.send("Here is a recepit of your booking!");
+    message.author.send(bookEmbed);
 }
 setTimeout(embedBook,2e4)
 }
