@@ -9,8 +9,9 @@ exports.run = (Discord, client, message, args) => {
 	
 var type = "";	
 	
-const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
-           message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
+        message.channel.send("The max time for this booking process is `60 seconds`, if you take longer then it may not go through the system.");
+	message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content == "Gold") {
 		type = 'Gold'
@@ -37,11 +38,6 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedbronze)
 		type = 'Bronze'
 	    }
-		})
-           
-	message.channel.send("What time do you want the private session to be?");
-	        collector.on('collect', message => {
-			
 		})
 			     
         let bookname = message.author;
