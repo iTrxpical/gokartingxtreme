@@ -2,7 +2,7 @@ exports.run = (Discord, client, message, args) => {
 
 var type = "";	
 	
-const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 10000 });
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 20000 });
            message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content.toLowerCase() === "Gold") {
@@ -50,6 +50,6 @@ function embedBook() {
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
 }
 
-setTimeout(embedBook, 60000);
+setTimeout(embedBook, 20000);
     
 }
