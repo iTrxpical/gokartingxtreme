@@ -11,6 +11,8 @@ exports.run = (Discord, client, message, args) => {
         .addField(":exclamation: =help", "Refers user to =info command.")
         .addField(":book: =info", "DMs user detailed infomation about how Go-Karting Xtreme operates.")
         .addField("::ping_pong:: =ping", "Shows your current ping.")
+        .addField(":book: =book", "Allows you to book a priave session, look at =plans for more info..")
+        .addField(":race_car: =plans", "Shows you a list of avalible private session plans.")
         .addField(":clock: More CMDS coming soon", "What do you expect me to put here?")
     message.author.sendEmbed(embedcmds);
     message.delete(10000)
