@@ -37,7 +37,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Time:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
-		message.channel.send("What date do you wish it to be? (Format: DD/MM/YY)");
+		message.channel.send("What date do you wish it to be? (Format: DD-MM-YY (**- not /**))");
 	  collector.on('collect', message => {
 		date = message.content
 		var embeddate = new Discord.RichEmbed()
