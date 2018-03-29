@@ -15,12 +15,12 @@ client.on('ready', () => {
 });
 
 
-client.on('message', message => {    
-    
+client.on('message', message => {   
+   
        let sender = message.author;
        let allowedRole = message.guild.roles.find("name", "Board Of Executives");
        let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
-
+   
        if (message.channel.id === '422091691604967425') {
        if(message.member.roles.has(allowedRole.id)) {
          message.channel.send("Message Allowed :ballot_box_with_check:")
@@ -44,6 +44,10 @@ client.on('message', message => {
         message.channel.send(embederrordm);
         return;
     }
+   
+   if (sender.id === '294507566233419776') {
+    return;  
+   }
    
    if (message.mentions.members.firstKey() === '422393536420511752') {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. If you need me, please use the command `=info`!')
