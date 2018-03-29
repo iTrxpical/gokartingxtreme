@@ -1,6 +1,6 @@
 exports.run = (Discord, client, message, args) => {
 
-	if (message.channel.id !== '368417914459783171') {
+	if (message.channel.id === '368417914459783171') {
 	message.delete()
 	} else {
 	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")	
