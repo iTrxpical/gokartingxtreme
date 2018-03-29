@@ -13,7 +13,6 @@ exports.run = (Discord, client, message, args) => {
         .addField("::ping_pong:: =ping", "Shows your current ping.")
         .addField(":book: =book", "Allows you to book a priave session, look at =plans for more info..")
         .addField(":race_car: =plans", "Shows you a list of avalible private session plans.")
-        .addField(":newspaper: =book", "Allows you to book our state of the ark, private sessions!")
         .addField(":clock: More CMDS coming soon", "What do you expect me to put here?")
     message.author.sendEmbed(embedcmds);
     message.delete(10000)
