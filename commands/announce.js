@@ -11,7 +11,7 @@ const sayMessage = args.join(" ");
         .setTitle("Announcment:")
         .setDescription(sayMessage)
         .setFooter("Announcment made at:", new Date().getTime() - message.createdTimestamp + " ms")
-    message.channel.send(embedping)
+    message.channel.sendembed(embedping)
 }
 
 
