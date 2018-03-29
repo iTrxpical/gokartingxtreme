@@ -45,9 +45,6 @@ client.on('message', message => {
         return;
     }
    
-   if (sender.id === '294507566233419776') {
-    return;  
-   }
    
    if (message.mentions.members.firstKey() === '422393536420511752') {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. If you need me, please use the command `=info`!')
