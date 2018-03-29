@@ -8,7 +8,7 @@ exports.run = (Discord, client, message, args) => {
 	return;
 	}
 	
-var type = "";	
+var type = " ";	
 	
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
         message.channel.send("The max time for this booking process is `60 seconds`, if you take longer then it may not go through the system.");
