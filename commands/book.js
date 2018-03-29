@@ -10,14 +10,20 @@ exports.run = (Discord, client, message, args) => {
 
 var type = " ";
 var time = " ";
+var date = " ";
+var group = " ";
+var groupid = "N/A";
+var minrole = "N/A";
+var notesPlans = " ";
+var usernames = "N/A";
 
 const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 300000 });
-        message.channel.send("The max time for this booking process is `5 minutes`, if you take longer then it may not go through the system.");
+        message.channel.send("The max time for this booking process is `5 minutes`, if you take longer then it may not go through the system. **Notice: Our booking process will not tell you when the time is over, if you do not recieve a DM from our bot within an hour of booking, retry or contact our BoX team.**");
 	message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content == "Gold") {
 		type = 'Gold'
-                    var embedgold = new Discord.RichEmbed()
+    var embedgold = new Discord.RichEmbed()
 		.addField("Gold:", ":white_check_mark:")
 		.addField("Silver:", ":negative_squared_cross_mark:")
 		.setColor("#FFD700")
@@ -25,12 +31,22 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedgold)
 		message.delete()
 		message.channel.send("What time do you wish it to be? (Include timezone)");
-	        collector.on('collect', message => {
+	  collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
 		.addField("Time:", `${time}`)
 		message.channel.send(embedtime)
+		message.delete()
+		message.channel.send("What date do you wish it to be? (Format: DD/MM/YY)");
+	  collector.on('collect', message => {
+		date = message.content
+		var embeddate = new Discord.RichEmbed()
+		.addField("Date:", `${date}`)
+		message.channel.send(embeddate)
+		message.channel.delete
 		})
+		})
+
 	  } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
@@ -62,6 +78,7 @@ function embedBook() {
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
     .addField("Time", `${time}`)
+		.addField("Date", `${date}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
