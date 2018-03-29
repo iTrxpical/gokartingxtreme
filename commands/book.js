@@ -10,7 +10,6 @@ exports.run = (Discord, client, message, args) => {
 
 var type = " ";
 var time = " ";
-var date = " ";
 var group = " ";
 var groupid = "N/A";
 var minrole = "N/A";
@@ -34,7 +33,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 	  collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
-		.addField("Time:", `${time}`)
+		.addField("Time & Date:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
 	})
@@ -69,8 +68,7 @@ function embedBook() {
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
-    .addField("Time", `${time}`)
-		.addField("Date", `${date}`)
+    .addField("Time & Date", `${time}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
