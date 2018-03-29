@@ -39,11 +39,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		type = 'Bronze'
 	    }
 		})
-           
-	message.channel.send("What time do you want the private session to be?");
-	        collector.on('collect', message => {
-			
-		})
+        
 			     
         let bookname = message.author;
     
