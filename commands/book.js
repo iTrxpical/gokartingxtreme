@@ -3,15 +3,16 @@ exports.run = (Discord, client, message, args) => {
 	if (message.channel.id === '368417914459783171') {
 	message.delete()
 	} else {
-	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")	
+	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")
 	.then(m=>m.delete(10000))
 	return;
 	}
-	
-var type = " ";	
-	
-const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
-        message.channel.send("The max time for this booking process is `60 seconds`, if you take longer then it may not go through the system.");
+
+var type = " ";
+var time = " ";
+
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 300000 });
+        message.channel.send("The max time for this booking process is `5 minutes`, if you take longer then it may not go through the system.");
 	message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content == "Gold") {
@@ -23,7 +24,9 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		.addField("Bronze:", ":negative_squared_cross_mark:");
 		message.channel.send(embedgold)
 		message.delete()
-            } else if (message.content == "Silver") {
+		message.channel.send("What time do you wish it to be? (Include timezone)");
+		time = message.content
+	  } else if (message.content == "Silver") {
                     var embedsilver = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
 		.addField("Silver:", ":white_check_mark:")
@@ -43,9 +46,9 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		type = 'Bronze'
 	    }
 		})
-			     
+
         let bookname = message.author;
-    
+
 function embedBook() {
     var bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
