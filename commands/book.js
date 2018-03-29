@@ -32,7 +32,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 			     
         let bookname = message.author;
     
-function embedBoox() {
+function embedBook() {
     var bookEmbed = new Discord.RichEmbed()
     .setTitle("Go Karting Xtreme")
     .setDescription("Private Booking")
@@ -48,6 +48,6 @@ function embedBoox() {
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
 }
 
-setTimeout(embedBoox, 5000);
+setTimeout(embedBook, 60000);
     
 }
