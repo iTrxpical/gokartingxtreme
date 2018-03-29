@@ -10,6 +10,7 @@ exports.run = (Discord, client, message, args) => {
 
 var type = " ";
 var time = " ";
+var date = " ";
 var group = " ";
 var groupid = "N/A";
 var minrole = "N/A";
@@ -33,7 +34,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 	  collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
-		.addField("Time & Date:", `${time}`)
+		.addField("Time:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
 	})
@@ -47,6 +48,14 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedsilver)
 		message.delete()
 		type = 'Silver'
+		message.channel.send("What date & time do you wish it to be? (Include Timezone / DD-MM-YY)");
+		collector.on('collect', message => {
+		time = message.content
+		var embedtime = new Discord.RichEmbed()
+		.addField("Time:", `${time}`)
+		message.channel.send(embedtime)
+		message.delete()
+	})
             } else if (message.content == "Bronze") {
                     var embedbronze = new Discord.RichEmbed()
 		.addField("Gold:", ":negative_squared_cross_mark:")
@@ -56,6 +65,15 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedbronze)
 		message.delete()
 		type = 'Bronze'
+		message.channel.send("What date & time do you wish it to be? (Include Timezone / DD-MM-YY)");
+		collector.on('collect', message => {
+		time = message.content
+		var embedtime = new Discord.RichEmbed()
+		.addField("Time:", `${time}`)
+		message.channel.send(embedtime)
+		message.delete()
+	})
+
 	    }
 		})
 
@@ -68,7 +86,8 @@ function embedBook() {
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
-    .addField("Time & Date", `${time}`)
+    .addField("Time", `${time}`)
+		.addField("Date", `${date}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
