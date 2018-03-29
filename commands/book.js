@@ -10,15 +10,9 @@ exports.run = (Discord, client, message, args) => {
 
 var type = " ";
 var time = " ";
-var date = " ";
-var group = " ";
-var groupid = "N/A";
-var minrole = "N/A";
-var notesPlans = " ";
-var usernames = "N/A";
 
-const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 180000 });
-        message.channel.send("The max time for this booking process is `3 minutes`, if you take longer then it may not go through the system. **Notice: Our booking process will not tell you when the time is over, if you do not recieve a DM from our bot within an hour of booking, retry or contact our BoX team.**");
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 300000 });
+        message.channel.send("The max time for this booking process is `5 minutes`, if you take longer then it may not go through the system. **Notice: Our booking process will not tell you when the time is over, if you do not recieve a DM from our bot within an hour of booking, retry or contact our BoX team.**");
 	message.channel.send("What plan do you wish to book? (`Gold`, `Silver` or `Bronze`)");
 	        collector.on('collect', message => {
             if (message.content == "Gold") {
@@ -34,7 +28,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 	  collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
-		.addField("Time:", `${time}`)
+		.addField("Time & Date:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
 	})
@@ -52,7 +46,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
-		.addField("Time:", `${time}`)
+		.addField("Time & Date:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
 	})
@@ -69,7 +63,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		collector.on('collect', message => {
 		time = message.content
 		var embedtime = new Discord.RichEmbed()
-		.addField("Time:", `${time}`)
+		.addField("Time & Date:", `${time}`)
 		message.channel.send(embedtime)
 		message.delete()
 	})
@@ -86,8 +80,7 @@ function embedBook() {
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
-    .addField("Time", `${time}`)
-		.addField("Date", `${date}`)
+    .addField("Time & Date", `${time}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
