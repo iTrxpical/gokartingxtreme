@@ -38,9 +38,12 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedbronze)
 		type = 'Bronze'
 	    }
-		const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
-           message.channel.send("What time and date do you with to book for?");
+	
 		})
+var time = "";
+	
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 100 });
+           message.channel.send("What time and date do you with to book for?");
 
         
 			     
@@ -53,6 +56,7 @@ function embedBook() {
     .setColor("#15f153")
     .addField("Booker", `${bookname} with the ID: ${bookname.id}`)
     .addField("Type", `${type}`)
+    .addField("Time", `${time}`)
     .addField("Booked At", message.createdAt)
     .setFooter("Private Booking V1.0");
 
