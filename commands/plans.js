@@ -19,7 +19,7 @@ exports.run = (Discord, client, message, args) => {
     .addField("Racer Amount", "40 racers maximum")
     .addField("Staff", "8 staff members")
     .addField("Race Types", "Free time, races, bumper karts, wrong-way-racing and showdown avalible")
-    .addField("Price", "R$399 (SALE)")
+    .addField("Price", "R$449")
     message.channel.sendEmbed(embedgold);
     var embedsilver = new Discord.RichEmbed()
   .setTitle("Silver") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
@@ -29,7 +29,7 @@ exports.run = (Discord, client, message, args) => {
     .addField("Racer Amount", "25 racers maximum")
     .addField("Staff", "6 staff members")
     .addField("Race Types", "Free time, races and showdown avalible")
-    .addField("Price", "R$299 (SALE)")
+    .addField("Price", "R$349")
     message.channel.sendEmbed(embedsilver);
     var embedbronze= new Discord.RichEmbed()
   .setTitle("Bronze") //Wait a sec I've got an idea, we should have it so different pages has different plans, let me find dat code.
