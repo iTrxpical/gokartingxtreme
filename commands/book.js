@@ -38,7 +38,10 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		message.channel.send(embedbronze)
 		type = 'Bronze'
 	    }
+		const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
+           message.channel.send("What time and date do you with to book for?");
 		})
+
         
 			     
         let bookname = message.author;
