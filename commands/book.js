@@ -39,6 +39,36 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		type = 'Bronze'
 	    }
 		})
+var type = "";	
+	
+const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
+           message.channel.send("What date would you with to book? Current dates:");
+	        collector.on('collect', message => {
+	if (message.content == "1") {
+		type = 'Gold'
+                    var embedgold = new Discord.RichEmbed()
+		.addField("Gold:", ":white_check_mark:")
+		.addField("Silver:", ":negative_squared_cross_mark:")
+		.setColor("#FFD700")
+		.addField("Bronze:", ":negative_squared_cross_mark:");
+		message.channel.send(embedgold)
+            } else if (message.content == "2") {
+                    var embedsilver = new Discord.RichEmbed()
+		.addField("Gold:", ":negative_squared_cross_mark:")
+		.addField("Silver:", ":white_check_mark:")
+		.setColor("#C0C0C0")
+		.addField("Bronze:", ":negative_squared_cross_mark:");
+		message.channel.send(embedsilver)
+		type = 'Silver'
+            } else if (message.content == "3") {
+                    var embedbronze = new Discord.RichEmbed()
+		.addField("Gold:", ":negative_squared_cross_mark:")
+		.addField("Silver:", ":negative_squared_cross_mark:")
+		.setColor("#CD7F32")
+		.addField("Bronze:", ":white_check_mark:");
+		message.channel.send(embedbronze)
+		type = 'Bronze'
+			
         
 			     
         let bookname = message.author;
