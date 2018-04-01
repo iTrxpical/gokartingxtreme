@@ -39,7 +39,7 @@ exports.run = (Discord, client, message, args) => {
     .addField("Racer Amount", "15 racers maximum")
     .addField("Staff", "4 staff members")
     .addField("Race Types", "Free time, races avalible")
-    .addField("Price", "R$169 (REDUCED)")
+    .addField("Price", "R$169")
     message.channel.sendEmbed(embedbronze);
 
 }
