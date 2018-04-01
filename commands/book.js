@@ -40,9 +40,6 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 	    }
 	
 		})
-
-
-	var time = "";	
 	
 
 	const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 6000 });
