@@ -39,9 +39,12 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 		type = 'Bronze'
 	    }
 		})
-var type = "";	
+
+	var type = "";	
 	
-const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
+
+	
+	const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000 });
            message.channel.send("What date would you with to book? Current dates:");
 	        collector.on('collect', message => {
 	if (message.content == "1") {
