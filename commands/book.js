@@ -47,6 +47,7 @@ const collector = new Discord.MessageCollector(message.channel, m => m.author.id
 
 	const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 6000 });
            message.channel.send("What time and date do you with to book for?");
+	collector.on('collect', message => {
 
         
 			     
