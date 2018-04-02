@@ -4,7 +4,14 @@ let sender = message.author;
 let blacklistedRole = message.guild.roles.find("name", "Booking Blacklisted");
 
        if(message.member.roles.has(blacklistedRole.id)) {
-        message.reply("you are blacklisted from booking private sessions!")	
+        message.reply("you are blacklisted from booking private sessions!")
+	        var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    		var embedping = new Discord.RichEmbed()
+        .setColor(randomColor)
+	.setTitle(":x: Booking Blacklist")
+	.setDescription("You are blacklisted from creating bookings, if you think this is wrong, contact AaronnSmh.")
+	.setImage("https://media0.giphy.com/media/e3WNjAUKGNGoM/giphy.gif")
+    message.channel.send(embedping)
 	return;
         
        } else {
