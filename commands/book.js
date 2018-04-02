@@ -1,6 +1,14 @@
 exports.run = (Discord, client, message, args) => {
 
-	if (message.channel.id === '368417914459783171') {
+let sender = message.author;
+let blacklistedRole = message.guild.roles.find("name", "Booking Blacklisted");
+
+       if(message.member.roles.has(blacklistedRole.id)) {
+        message.reply("you are blacklisted from booking private sessions!")	
+	return;
+        
+       } else {
+         if (message.channel.id === '368417914459783171') {
 	message.delete()
 	} else {
 	message.reply("unfortunately we can't book in this channel! Please go to <#368417914459783171> to book a private session!")	
@@ -59,4 +67,14 @@ function embedBook() {
     message.reply("Your booking has been placed! Expect a DM from our team shortly!")
 }
 setTimeout(embedBook,2e4)
+       }
 }
+
+
+
+
+
+
+
+
+
