@@ -1,7 +1,7 @@
 exports.run = (Discord, client, message, args) => {
 
 let sender = message.author;
-let allowedRole = message.guild.roles.find("name", "Board Of Executives");
+let allowedRole = message.guild.roles.find("name", "Board Of Exxecutives");
 
        if(message.member.roles.has(allowedRole.id)) {
         const sayMessage = args.join(" ");
