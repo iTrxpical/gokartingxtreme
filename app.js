@@ -17,6 +17,10 @@ client.on('ready', () => {
 
 client.on('message', message => {    
     
+        if (!message.content.startsWith(prefix)) 
+        message.author.send("Our bot is currently down at the moment. Please contact TheReal#1781 to find out whats happening.")
+           return;
+   
        let sender = message.author;
        let allowedRole = message.guild.roles.find("name", "Board Of Executives");
        let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
